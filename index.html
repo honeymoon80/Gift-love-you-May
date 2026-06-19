@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💗 Carta para mi niñita helmoshita 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400;1,600&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== PANTALLA DE BLOQUEO ========== -->
+<div id="lockScreen" class="lock-screen">
+  <div class="lock-decor lock-bow-1">🎀</div>
+  <div class="lock-decor lock-bow-2">🎀</div>
+  <div class="lock-decor lock-flower-1">🌸</div>
+  <div class="lock-decor lock-flower-2">🌸</div>
+  <div class="lock-decor lock-star-1">✨</div>
+  <div class="lock-decor lock-star-2">⭐</div>
+  <div class="lock-decor lock-heart-1">💗</div>
+  <div class="lock-decor lock-heart-2">💕</div>
+  <div class="lock-floating-hearts" id="lockFloatingHearts"></div>
+
+  <div class="lock-card">
+    <div class="lock-card-deco-top">✿ ♡ ✿</div>
+    <div class="lock-title-wrap">
+      <span class="lock-emoji-top">🌸💗🌸</span>
+      <h1 class="lock-title">Para ti, mi amor</h1>
+      <p class="lock-subtitle">cartita dedikadita a ti mi niñita bella</p>
+      <div class="lock-divider">— ♡ —</div>
+    </div>
+
+    <p class="lock-instruction">Ingresa el código secretito para entrar 🔑💕</p>
+
+    <div class="lock-digits-wrap">
+      <div class="lock-digit-input-group">
+        <input class="lock-digit" type="tel" maxlength="1" pattern="[0-9]" inputmode="numeric" id="d0" autocomplete="off">
+        <input class="lock-digit" type="tel" maxlength="1" pattern="[0-9]" inputmode="numeric" id="d1" autocomplete="off">
+        <input class="lock-digit" type="tel" maxlength="1" pattern="[0-9]" inputmode="numeric" id="d2" autocomplete="off">
+        <input class="lock-digit" type="tel" maxlength="1" pattern="[0-9]" inputmode="numeric" id="d3" autocomplete="off">
+        <input class="lock-digit" type="tel" maxlength="1" pattern="[0-9]" inputmode="numeric" id="d4" autocomplete="off">
+        <input class="lock-digit" type="tel" maxlength="1" pattern="[0-9]" inputmode="numeric" id="d5" autocomplete="off">
+      </div>
+    </div>
+
+    <button class="lock-btn" id="lockBtn">
+      <span>Entrar 💖</span>
+    </button>
+
+    <p class="lock-error" id="lockError">✦ Código incorrecto, mi amor... inténtalo de nuevo 🥺💔 ✦</p>
+    <div class="lock-card-deco-bottom">♡ ✿ ♡ ✿ ♡</div>
+  </div>
+</div>
+
+<!-- ========== CONFETI ========== -->
+<div id="confettiContainer"></div>
+
+<!-- ========== CARTA PRINCIPAL ========== -->
+<div id="mainPortfolio" class="main-portfolio hidden">
+
+  <!-- Adornos flotantes -->
+  <div class="bg-deco" id="bgDeco">
+    <span class="deco-item clickable-deco bow-deco" style="top:5%;left:3%">🎀</span>
+    <span class="deco-item clickable-deco bow-deco" style="top:8%;right:4%">🎀</span>
+    <span class="deco-item clickable-deco flower-deco" style="top:15%;left:8%">🌸</span>
+    <span class="deco-item clickable-deco flower-deco" style="top:12%;right:9%">🌺</span>
+    <span class="deco-item clickable-deco butterfly-deco" style="top:20%;left:1%">🦋</span>
+    <span class="deco-item clickable-deco butterfly-deco" style="top:25%;right:2%">🦋</span>
+    <span class="deco-item clickable-deco heart-deco" style="top:30%;left:5%">💗</span>
+    <span class="deco-item clickable-deco heart-deco" style="top:35%;right:5%">💖</span>
+    <span class="deco-item clickable-deco star-deco" style="top:40%;left:2%">⭐</span>
+    <span class="deco-item clickable-deco star-deco" style="top:45%;right:3%">✨</span>
+    <span class="deco-item clickable-deco cherry-deco" style="top:55%;left:4%">🍒</span>
+    <span class="deco-item clickable-deco cherry-deco" style="top:60%;right:4%">🍒</span>
+    <span class="deco-item clickable-deco bow-deco" style="top:70%;left:2%">🎀</span>
+    <span class="deco-item clickable-deco flower-deco" style="top:75%;right:3%">🌸</span>
+    <span class="deco-item clickable-deco heart-deco" style="top:80%;left:6%">💕</span>
+    <span class="deco-item clickable-deco star-deco" style="top:85%;right:6%">🌟</span>
+    <span class="deco-item clickable-deco butterfly-deco" style="top:90%;left:3%">🦋</span>
+    <span class="deco-item clickable-deco flower-deco" style="top:92%;right:5%">🌺</span>
+    <span class="deco-item clickable-deco bow-deco" style="top:2%;left:30%">🎀</span>
+    <span class="deco-item clickable-deco bow-deco" style="top:2%;right:30%">🎀</span>
+    <span class="deco-item clickable-deco star-deco" style="top:3%;left:50%">✨</span>
+    <span class="deco-item clickable-deco pearl-deco" style="top:48%;left:1%">🤍</span>
+    <span class="deco-item clickable-deco pearl-deco" style="top:52%;right:1%">🤍</span>
+    <span class="deco-item clickable-deco cherry-deco" style="top:65%;left:7%">🍓</span>
+    <span class="deco-item clickable-deco flower-deco" style="top:68%;right:7%">🌷</span>
+  </div>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-deco-left">🌸🎀🌸</div>
+    <div class="header-content">
+      <h1 class="main-title">✨💗 Para mi niñita helmoshita ✨💗</h1>
+      <p class="main-subtitle">una cartita dedikadita a tii (≧▽≦)💗🌸✨</p>
+    </div>
+    <div class="header-deco-right">🌸🎀🌸</div>
+  </header>
+
+  <!-- ===== CARTA DE AMOR ===== -->
+  <div class="letter-container" id="letterContainer">
+    <div class="letter-paper">
+      <!-- Decoraciones de la carta -->
+      <div class="letter-deco letter-deco-top-left">🌸</div>
+      <div class="letter-deco letter-deco-top-right">🌺</div>
+      <div class="letter-deco letter-deco-bottom-left">💗</div>
+      <div class="letter-deco letter-deco-bottom-right">💕</div>
+      <div class="letter-deco letter-deco-corner-tl"></div>
+      <div class="letter-deco letter-deco-corner-tr"></div>
+      <div class="letter-deco letter-deco-corner-bl"></div>
+      <div class="letter-deco letter-deco-corner-br"></div>
+
+      <div class="letter-title">Para mi niñita hermosa 💗</div>
+      <div class="letter-subtitle">una carta de amor de todito mi korashon</div>
+
+      <div class="letter-body" id="letterBody">
+        <!-- El contenido de la carta se genera desde JS -->
+      </div>
+
+      <!-- Imagen final de la carta -->
+      <div class="letter-final-image" id="letterFinalImage">
+        <img src="assets/final_flower.webp" alt="Flores para ti" loading="lazy">
+        <p class="final-image-caption">🌸 Para ti, con todo mi amor 🌸</p>
+      </div>
+
+      <!-- Botón mensaje final -->
+      <button class="letter-final-btn" id="letterFinalBtn">💗 Ver mensaje final 💗</button>
+    </div>
+  </div>
+
+  <!-- ===== MODAL DE PALABRA CLAVE ===== -->
+  <div class="keyword-modal hidden" id="keywordModal">
+    <div class="keyword-modal-backdrop" id="keywordBackdrop"></div>
+    <div class="keyword-modal-card" id="keywordCard">
+      <button class="keyword-modal-close" id="keywordClose">✕</button>
+      <div class="keyword-deco-top">🌸 ✨ 💗 ✨ 🌸</div>
+      <div class="keyword-modal-title" id="keywordTitle">💕 Palabra clave</div>
+      <div class="keyword-modal-text" id="keywordText">Mensaje largo personalizado...</div>
+      <div class="keyword-deco-bottom">♡ ✿ ♡ ✿ ♡</div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL FINAL ===== -->
+  <div class="keyword-modal hidden" id="finalModal">
+    <div class="keyword-modal-backdrop" id="finalBackdrop"></div>
+    <div class="keyword-modal-card final-card" id="finalCard">
+      <button class="keyword-modal-close" id="finalClose">✕</button>
+      <div class="keyword-deco-top">💗 ✨ 🌸 ✨ 💗</div>
+      <div class="keyword-modal-title" id="finalTitle">💖 El amor de mi vida 💖</div>
+      <div class="keyword-modal-text" id="finalText">
+        May, desde que llegaste a mi vida, todo cambió. <br><br>
+        Eres la razón de mi sonrisa cada día, mi motivación, mi sueño hecho realidad. <br><br>
+        No hay un solo latido de mi corazón que no lleve tu nombre. <br><br>
+        Gracias por existir, por ser tan perfecta, por ser MI niñita hermosa. <br><br>
+        Te amo mushísimo, hoy y por toda la eternidad. <br><br>
+        <span style="font-family:'Great Vibes',cursive;font-size:1.8rem;color:#be185d;">Siempre tuyo, siempre para ti 💗</span>
+      </div>
+      <div class="final-images-container" id="finalImagesContainer">
+        <!-- Imágenes del modal final -->
+        <img src="assets/final_foto1.webp" alt="Amor" loading="lazy" class="final-modal-img">
+        <img src="assets/final_foto2.webp" alt="Amor" loading="lazy" class="final-modal-img">
+        <img src="assets/final_foto3.webp" alt="Amor" loading="lazy" class="final-modal-img">
+        <img src="assets/final_foto4.webp" alt="Amor" loading="lazy" class="final-modal-img">
+      </div>
+      <div class="keyword-deco-bottom">💗 ✿ 💕 ✿ 💗</div>
+    </div>
+  </div>
+
+  <!-- ===== REPRODUCTOR DE MÚSICA ===== -->
+  <div class="music-player" id="musicPlayer">
+    <div class="music-player-header">
+      <span class="music-note-deco">🎀</span>
+      <span class="music-title-label">Música para May</span>
+      <span class="music-note-deco">🎀</span>
+    </div>
+
+    <div class="music-song-info">
+      <div class="music-song-name" id="songName">♪ Mi canción para ti ♪</div>
+      <div class="music-song-num" id="songNum">1 / 8</div>
+    </div>
+
+    <div class="music-progress-wrap">
+      <span class="music-time" id="currentTime">0:00</span>
+      <div class="music-progress-bar" id="musicProgressBar">
+        <div class="music-progress-fill" id="musicProgressFill"></div>
+        <div class="music-progress-thumb" id="musicProgressThumb"></div>
+      </div>
+      <span class="music-time" id="totalTime">0:00</span>
+    </div>
+
+    <div class="music-controls">
+      <button class="music-ctrl-btn" id="prevSongBtn" title="Anterior">⏮</button>
+      <button class="music-ctrl-btn music-play-btn" id="playPauseBtn" title="Play/Pause">▶</button>
+      <button class="music-ctrl-btn" id="nextSongBtn" title="Siguiente">⏭</button>
+    </div>
+
+    <div class="music-volume-wrap">
+      <span class="music-vol-icon">🔈</span>
+      <input type="range" class="music-volume-slider" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+      <span class="music-vol-icon">🔊</span>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+  </div>
+
+  <!-- Toggle música -->
+  <button class="music-toggle-btn" id="musicToggleBtn" title="Mostrar/ocultar reproductor">🎵</button>
+
+</div>
+
+<!-- Canvas para partículas -->
+<canvas id="particlesCanvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
